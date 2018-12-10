@@ -25,8 +25,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <h1>Axios Class Wrapper</h1>
+      <h2>Test to show an axios class wrapper</h2>
     </div>
   );
 }
