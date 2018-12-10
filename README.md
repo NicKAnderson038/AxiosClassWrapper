@@ -1,2 +1,0 @@
-# AxiosClassWrapper
-Created with CodeSandbox
