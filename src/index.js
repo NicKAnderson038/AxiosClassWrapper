@@ -5,18 +5,20 @@ import Connector from "../config/index";
 import "./styles.css";
 
 function App() {
+
   const requestUrls = [
     "https://jsonplaceholder.typicode.com/posts/7",
-    "https://jsonplaceholder.typicode.com/todos/1",
+    "https://jsonplaceholder.typicode.com/todos/4",
     "https://jsonplaceholder.typicode.com/posts/3",
     "https://jsonplaceholder.typicode.com/todos/2",
     "https://jsonplaceholder.typicode.com/posts/1"
   ];
 
   for (const params of requestUrls) {
+    const num = params.slice(-1);
     Connector.get(params, {})
       .then(res => {
-        console.log("my data: ", res.data);
+        console.log(`my data ${num}: `, res.data);
       })
       .catch(err => console.error(err));
   }
