@@ -5,7 +5,6 @@ import Connector from "../config/index";
 import "./styles.css";
 
 function App() {
-
   const requestUrls = [
     "https://jsonplaceholder.typicode.com/posts/7",
     "https://jsonplaceholder.typicode.com/todos/4",
@@ -16,6 +15,7 @@ function App() {
 
   for (const params of requestUrls) {
     const num = params.slice(-1);
+    console.log(params);
     Connector.get(params, {})
       .then(res => {
         console.log(`my data ${num}: `, res.data);
